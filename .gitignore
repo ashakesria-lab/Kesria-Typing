@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-pages/
+test-results/
+playwright-report/
+.firebase/
+.env
+.env.local
