@@ -4,71 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f7fb" />
-    <meta name="description" content="Build typing speed and accuracy with friendly lessons, focused practice, and progress you can see." />
-    <title>Kesria Typing — typing practice</title>
+    <meta name="description" content="Practise English typing and track your progress with Kesria Typing." />
+    <title>Kesria Typing — practice and progress</title>
+    <link rel="icon" type="image/png" href="/Kesria-Typing/kesria-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="./kesria-mark.png" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
+    <script type="module" crossorigin src="/Kesria-Typing/assets/index-_DKXpNHd.js"></script>
+    <link rel="stylesheet" crossorigin href="/Kesria-Typing/assets/index-ByWDv01d.css">
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="Kesria Typing home"><span class="brand-mark"><img src="./kesria-mark.png" alt="" /></span><span>Kesria <span>Typing</span><i>.</i></span></a>
-        <div class="nav-label">YOUR SPACE</div>
-        <nav class="main-nav">
-          <a class="nav-link active" href="#home"><span class="nav-icon">⌂</span> Overview <span class="nav-active-dot"></span></a>
-          <a class="nav-link" href="#practice"><span class="nav-icon">⌨</span> Practice</a>
-          <a class="nav-link" href="#lessons"><span class="nav-icon">▤</span> Lessons <span class="nav-count">12</span></a>
-          <a class="nav-link" href="#progress"><span class="nav-icon">↗</span> My progress</a>
-        </nav>
-        <div class="side-card"><span class="side-card-icon">✦</span><strong>Small steps.<br />Big speed.</strong><p>Just 10 minutes a day can make all the difference.</p><div class="side-progress"><span id="side-progress-bar"></span></div><small><span id="side-goal-label">0 / 10</span> min today&apos;s goal</small></div>
-        <div class="sidebar-bottom"><div class="avatar">KS</div><div class="profile-copy"><strong>Practice pal</strong><span>Free learner</span></div><button class="more-button" aria-label="More options">···</button></div>
-      </aside>
-
-      <main class="main-content" id="home">
-        <header class="topbar"><div class="breadcrumb">Your space <span>/</span> <strong>Overview</strong></div><div class="topbar-actions"><span class="today-date" id="today-date"></span><button class="icon-button muted" id="sound-toggle" aria-label="Enable keyboard sounds" title="Toggle keyboard sounds">♫<i></i></button><button class="profile-button" aria-label="Your profile">K</button></div></header>
-        <div class="page-wrap">
-          <section class="welcome-row">
-            <div><div class="eyebrow"><span class="eyebrow-star">✳</span> YOUR DAILY PRACTICE</div><h1>A little practice.<br /><span>A lot more confidence.</span></h1><p class="welcome-copy">Build your speed one keystroke at a time. <span>अपनी typing skills रोज़ बेहतर बनाएं।</span></p></div>
-            <div class="welcome-art"><img class="welcome-logo" src="./kesria-typing-logo.jpeg" alt="Kesria Typing logo" /></div>
-          </section>
-
-          <section class="stats-grid" aria-label="Your typing stats">
-            <article class="stat-card stat-speed"><div class="stat-top"><span>BEST SPEED</span><span class="stat-icon purple">↗</span></div><div class="stat-value"><strong id="best-wpm">0</strong><span>WPM</span></div><div class="stat-foot"><span class="stat-dot"></span> Your personal best</div><div class="mini-chart" aria-hidden="true"><i style="height:26%"></i><i style="height:42%"></i><i style="height:32%"></i><i style="height:61%"></i><i style="height:47%"></i><i style="height:76%"></i><i style="height:58%"></i><i style="height:92%"></i></div></article>
-            <article class="stat-card"><div class="stat-top"><span>AVG. ACCURACY</span><span class="stat-icon green">◎</span></div><div class="stat-value"><strong id="avg-accuracy">—</strong><span>%</span></div><div class="stat-foot"><span class="soft-green">Aim for 95% or more</span></div><div class="accuracy-line"><span id="accuracy-line"></span></div></article>
-            <article class="stat-card"><div class="stat-top"><span>PRACTICE TIME</span><span class="stat-icon orange">◷</span></div><div class="stat-value"><strong id="practice-time">0</strong><span>min</span></div><div class="stat-foot"><span class="soft-orange">Every minute adds up</span></div><div class="time-blocks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
-            <article class="stat-card streak-card"><div class="stat-top"><span>DAY STREAK</span><span class="stat-icon coral">♨</span></div><div class="stat-value"><strong id="streak-days">0</strong><span>days</span></div><div class="stat-foot"><span class="soft-coral">Show up, grow stronger</span></div><div class="streak-week" id="streak-week"></div></article>
-          </section>
-
-          <section class="practice-section" id="practice">
-            <div class="section-heading"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Let&apos;s get in the flow<span>.</span></h2></div><button class="text-button" id="new-prompt">New text <span>↻</span></button></div>
-            <div class="practice-layout">
-              <div class="typing-card">
-                <div class="typing-toolbar"><div class="mode-tabs" role="tablist" aria-label="Typing mode"><button class="mode-tab selected" data-mode="practice" role="tab" aria-selected="true">Free practice</button><button class="mode-tab" data-mode="lesson" role="tab" aria-selected="false">Guided lesson</button></div><div class="typing-settings"><span class="language-chip">English practice</span><label class="select-wrap"><span class="sr-only">Test duration</span><select id="duration-select"><option value="15">15 sec</option><option value="30" selected>30 sec</option><option value="60">60 sec / 1 min</option><option value="180">3 min</option><option value="300">5 min</option></select><span>⌄</span></label></div></div>
-                <div class="lesson-banner" id="lesson-banner" hidden><span>✦</span><div><b>Home row: find your flow</b><small>Keep your fingers on A S D F and J K L ;</small></div><span class="lesson-step">LESSON 01 OF 12</span></div>
-                <div class="test-metrics"><div class="timer-box"><span class="timer-ring">◷</span><div><small>TIME LEFT</small><strong id="timer">00:30</strong></div></div><div class="live-metric"><small>LIVE SPEED</small><strong><span id="live-wpm">0</span> <small>WPM</small></strong></div><div class="live-metric"><small>ACCURACY</small><strong><span id="live-accuracy">100</span><small>%</small></strong></div><div class="live-metric"><small>CHARACTERS</small><strong id="char-count">0</strong></div><button class="reset-button" id="reset-test" title="Reset test" aria-label="Reset test">↻</button></div>
-                <div class="typing-area" id="typing-area"><div class="passage" id="passage" aria-hidden="true"></div><textarea id="typing-input" aria-label="Typing practice. Type the passage shown above." autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="500"></textarea><div class="typing-hint" id="typing-hint"><span class="hint-key">↵</span> Click here or start typing to begin <span class="hint-separator">·</span> <span>Backspace</span> to correct</div></div>
-                <div class="keyboard-row" aria-label="Home row keyboard guide"><span class="keyboard-label">HOME ROW</span><div class="keyboard-keys"><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd class="key-highlight">F</kbd><kbd class="key-space"></kbd><kbd class="key-highlight">J</kbd><kbd>K</kbd><kbd>L</kbd><kbd>;</kbd></div><span class="keyboard-note">Rest your fingers here <span>↗</span></span></div>
-                <div class="typing-footer"><span><i class="live-dot"></i> <span id="test-status">Ready when you are</span></span><button class="focus-button" id="focus-button"><span>⌨</span> Start typing <span class="button-arrow">→</span></button><span class="keyboard-shortcut"><kbd>esc</kbd> to restart</span></div>
-              </div>
-              <aside class="practice-aside"><div class="goal-card"><div class="goal-top"><div><span class="eyebrow">DAILY GOAL</span><h3>You&apos;re doing great.</h3></div><span class="goal-icon">✳</span></div><div class="goal-progress-wrap"><div class="goal-progress"><span id="goal-progress-bar"></span></div><span id="goal-percent">0%</span></div><div class="goal-bottom"><b><span id="goal-minutes">0</span> <span id="goal-of">of 10 min</span></b><button id="edit-goal">Edit goal</button></div></div>
-                <div class="tip-card"><div class="tip-icon">✦</div><div class="eyebrow">A QUICK TIP</div><h3>Accuracy first.<br /><span>Speed will follow.</span></h3><p>Slow down just enough to get each keystroke right. Your pace will naturally pick up.</p><div class="tip-decoration">〰</div></div><div class="practice-note"><span>⌘</span><p>Take a breath, sit comfortably, and let your fingers find their rhythm.</p></div></aside>
-            </div>
-          </section>
-
-          <section class="lessons-section" id="lessons"><div class="section-heading lesson-heading"><div><div class="eyebrow">YOUR LEARNING PATH</div><h2>Little lessons, big progress<span>.</span></h2></div><button class="text-button" id="all-lessons">View all <span>→</span></button></div>
-            <div class="lesson-grid"><button class="lesson-card lesson-one" data-lesson="0"><span class="lesson-illustration"><span class="lesson-emoji">⌨</span><i>✳</i></span><span class="lesson-info"><small>LESSON 01 · 5 MIN</small><b>Meet the home row</b><span class="lesson-status"><i></i> Start learning <span>→</span></span></span></button><button class="lesson-card lesson-two" data-lesson="1"><span class="lesson-illustration"><span class="lesson-emoji">Aa</span><i>✳</i></span><span class="lesson-info"><small>LESSON 02 · 7 MIN</small><b>Reach for new keys</b><span class="lesson-status"><i></i> Beginner <span>→</span></span></span></button><button class="lesson-card lesson-three" data-lesson="2"><span class="lesson-illustration"><span class="lesson-emoji">&amp;!</span><i>✳</i></span><span class="lesson-info"><small>LESSON 03 · 8 MIN</small><b>Numbers &amp; punctuation</b><span class="lesson-status"><i></i> Beginner <span>→</span></span></span></button></div>
-          </section>
-          <section class="about-section" id="about"><div class="about-mark"><img src="./kesria-mark.png" alt="" /></div><div><div class="eyebrow">KESRIA TYPING</div><h2>About Kesria Typing</h2><p>Kesria Typing is a free English typing-practice and evaluation website for office professionals. Practise at your own pace, improve accuracy, and track your progress—without ads.</p></div></section>
-          <footer class="page-footer" id="progress"><span class="footer-brand">Kesria Typing<span>.</span></span><span>Made for your next keystroke.</span><a class="footer-about" href="#about">About Us</a><small class="copyright">© <span id="footer-year">2026</span> Kesria Typing. All rights reserved.</small><a href="mailto:hello@kesriatyping.com">Say hello ↗</a></footer>
-        </div>
-      </main>
-
-      <div class="modal-backdrop" id="result-modal" hidden><section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="result-title"><button class="modal-close" id="close-results" aria-label="Close results">×</button><div class="result-confetti">✳</div><div class="eyebrow">NICE WORK — SESSION COMPLETE</div><h2 id="result-title">Look at you go<span>!</span></h2><p class="result-subtitle">Every practice makes you a little better.</p><div class="result-score"><strong id="result-wpm">0</strong><span>WPM</span><small>typing speed</small></div><div class="result-details"><div><span>ACCURACY</span><b id="result-accuracy">0%</b></div><div><span>CHARACTERS</span><b id="result-chars">0</b></div><div><span>BEST SPEED</span><b id="result-best">0 WPM</b></div></div><p class="result-message" id="result-message"></p><button class="focus-button result-retry" id="try-again">Practice again <span class="button-arrow">→</span></button></section></div>
-      <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    </div>
+    <div id="root"></div>
   </body>
 </html>
