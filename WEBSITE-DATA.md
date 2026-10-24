@@ -119,14 +119,17 @@ npm audit --omit=dev
 - Real App Check production attestation and verified referral-reward backend.
 - Physical mobile-device check and optional custom domain.
 
-## 7. Deployment (Firebase Hosting)
+## 7. Deployment (Firebase Hosting + GitHub Pages)
 
-- **Live URL:** https://kesria-typing-927b1.web.app
+- **Primary live URL:** https://kesria-typing-927b1.web.app
+- **GitHub Pages URL:** https://ashakesria-lab.github.io/Kesria-Typing/
+- **GitHub repository (public source):** https://github.com/ashakesria-lab/Kesria-Typing
 - **Firebase project:** `kesria-typing-927b1` (Spark/free plan, no billing enabled)
 - **Hosting config:** `react-version/firebase.json` publishes the Vite `dist` folder with SPA rewrites and long-term caching for hashed assets.
 - **Project link:** `react-version/.firebaserc` sets `kesria-typing-927b1` as the default project.
+- **GitHub branches:** `main` has the source; `gh-pages` has the built Pages site with `.nojekyll`.
 
-Redeploy after changes:
+Redeploy Firebase after changes:
 
 ```bash
 cd "C:\Users\Admin\Documents\Default Project\typing-tutor\react-version"
@@ -134,7 +137,13 @@ npm run build
 npx firebase-tools deploy --only hosting --project kesria-typing-927b1
 ```
 
-The deployment command requires the Google account `ashakesria@gmail.com` to be logged in through the Firebase CLI. Do not commit `.env` or any private credentials.
+Rebuild GitHub Pages after changes (project-site base path):
+
+```bash
+npm run build -- --base=/Kesria-Typing/ --outDir=dist-pages
+```
+
+Publish `dist-pages` to the `gh-pages` branch. The deployment command requires the Google account `ashakesria@gmail.com` to be logged in through the Firebase CLI. Do not commit `.env` or any private credentials.
 
 ## 8. Firebase setup
 

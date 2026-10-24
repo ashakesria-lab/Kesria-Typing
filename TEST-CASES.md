@@ -38,6 +38,7 @@
 | TC-29 | Gemini AI Coach | Request feedback after a result, inspect the sanitized request, test unavailable/quota states. | Signed-in user gets concise feedback in chosen language; request contains metrics only, never raw keystrokes/text. | UI fallback pass; Gemini response pending Firebase AI Logic/App Check setup |
 | TC-30 | Playwright CLI end-to-end suite | Run `npm run test:e2e` against the local Vite server. | Browser suite passes for header/logo, language switch, listings, evaluation, challenge, score card, and disabled backend fallback. | Pass — 10 Playwright tests |
 | TC-31 | Public Firebase Hosting deployment | Open https://kesria-typing-927b1.web.app in a browser and verify page load, logo, listings, and footer. | Site loads over HTTPS from Firebase Hosting; branding, logo, practice UI, listings, and footer render correctly. | Pass — deployed and verified live |
+| TC-32 | GitHub source and Pages deployment | Open https://github.com/ashakesria-lab/Kesria-Typing and https://ashakesria-lab.github.io/Kesria-Typing/ | Source is public on `main`; Pages site loads CSS, JS, logo, lessons, tests, and footer over HTTPS with the correct `/Kesria-Typing/` base path. | Pass — repo 38 source files, Pages 12 built files, verified live |
 
 ## Automated unit tests
 

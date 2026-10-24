@@ -18,6 +18,20 @@ npx firebase-tools deploy --only hosting --project kesria-typing-927b1
 
 Login, cloud sync, leaderboard aur AI Coach tab tak disabled rahenge jab tak `.env` mein Firebase web config, Auth/Firestore providers aur App Check set nahi hote. Uske baad dobara build + deploy karein.
 
+## GitHub source + GitHub Pages
+
+- Source code (public): **https://github.com/ashakesria-lab/Kesria-Typing**
+- GitHub Pages website: **https://ashakesria-lab.github.io/Kesria-Typing/**
+- Repo mein `main` branch par pura source aur `gh-pages` branch par built site hai.
+- GitHub Pages build command (base path zaroori hai):
+
+```bash
+cd "C:\Users\Admin\Documents\Default Project\typing-tutor\react-version"
+npm run build -- --base=/Kesria-Typing/ --outDir=dist-pages
+```
+
+`dist-pages` ki files `gh-pages` branch par publish karni hoti hain. `.env` aur private keys kabhi push na karein.
+
 ## Simple JavaScript version
 
 1. `typing-tutor` folder kholiye.
